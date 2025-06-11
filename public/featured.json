@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "1",
+    "name": "Ancient Vase",
+    "shortDescription": "A beautiful vase from 200 BC.",
+    "image": "https://via.placeholder.com/300",
+    "likeCount": 12
+  },
+  {
+    "_id": "2",
+    "name": "Royal Sword",
+    "shortDescription": "Used in ancient wars.",
+    "image": "https://via.placeholder.com/300",
+    "likeCount": 34
+  }
+]
