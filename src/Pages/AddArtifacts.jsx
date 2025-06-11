@@ -57,7 +57,7 @@ const AddArtifact = () => {
         });
       }
     } catch (error) {
-      toast.error("❌ Failed to add artifact.");
+      toast.error(" Failed to add artifact.");
       console.error("Axios error:", error);
     }
   };
@@ -66,7 +66,7 @@ const AddArtifact = () => {
     <section className="max-w-3xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-center mb-6">Add New Artifact</h2>
 
-      {/* ToastContainer (needed to show toasts) */}
+    
       <ToastContainer position="top-center" autoClose={3000} />
 
       <form onSubmit={handleSubmit} className="space-y-4 p-6 shadow-lg rounded-lg">
@@ -87,8 +87,8 @@ const AddArtifact = () => {
         <input type="text" name="discoveredBy" placeholder="Discovered By" required value={formData.discoveredBy} onChange={handleChange} className="w-full p-3 border rounded" />
         <input type="text" name="presentLocation" placeholder="Present Location" required value={formData.presentLocation} onChange={handleChange} className="w-full p-3 border rounded" />
 
-        <input type="text" value={user?.displayName || ""} readOnly className="w-full p-3 border rounded bg-gray-100" />
-        <input type="email" value={user?.email || ""} readOnly className="w-full p-3 border rounded bg-gray-100" />
+        <input type="text" value={user?.displayName || ""} readOnly className="w-full p-3 border rounded " />
+        <input type="email" value={user?.email || ""} readOnly className="w-full p-3 border rounded " />
 
         <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">
           Add Artifact
