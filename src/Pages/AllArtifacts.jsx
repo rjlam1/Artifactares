@@ -42,7 +42,7 @@ const AllArtifacts = () => {
                   <span className="mr-1">❤️</span> {artifact.likeCount}
                 </span>
                 <Link
-                  to={`/artifact/${artifact._id}`}
+                  to={`/artifacts/${artifact._id}`}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out text-sm"
                 >
                   View Details

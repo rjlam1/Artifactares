@@ -7,7 +7,7 @@ const useFeaturedArtifacts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/featured')
+    axios.get('http://localhost:3000/artifacts/featured')
       .then(res => setArtifacts(res.data))
       .catch(err => console.error(err))
       .finally(() => setLoading(false));

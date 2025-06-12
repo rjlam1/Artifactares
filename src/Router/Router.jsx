@@ -9,8 +9,8 @@ import AddArtifacts from '../Pages/AddArtifacts';
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
 import MainLaOut from '../Layout/Mainlaout';
-import ArtifactDetails from '../Pages/artiFactsViewDetails';
 import PrivateRouter from '../PrivateRouter/PrivateRouter';
+import ArtifactDetail from '../Pages/ArtiFactsDetails';
 
 const Router = createBrowserRouter([
   {
@@ -22,7 +22,9 @@ const Router = createBrowserRouter([
      {path:'addArtifacts',element:<PrivateRouter><AddArtifacts></AddArtifacts></PrivateRouter>},
      {path:'login',Component:Login},
      {path:'register',Component:Register},
-     {path:"artifact/:id",Component:ArtifactDetails}
+    //  {path:"artifact/:id",Component:ArtifactDetails},
+    { path:"artifacts/:id", element:<PrivateRouter><ArtifactDetail /></PrivateRouter> }
+
     ]
   },
 ]);

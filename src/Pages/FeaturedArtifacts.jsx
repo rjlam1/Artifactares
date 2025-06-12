@@ -24,7 +24,8 @@ console.log("artifact id:", artifacts._id);
             <p className="text-gray-600">{artifact.shortDescription.slice(0, 80)}...</p>
             <div className="flex justify-between items-center mt-3">
               <span className="font-semibold">❤️ {artifact.likeCount}</span>
-              <Link to={`/artifact/${artifact._id}`} className="text-blue-600 hover:underline">View Details</Link>
+             <Link to={`/artifacts/${artifact._id}`} className="text-blue-600 hover:underline">View Details</Link>
+
             </div>
           </motion.div>
         ))}
