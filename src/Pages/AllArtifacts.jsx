@@ -1,13 +1,38 @@
-import { Link } from 'react-router';
+
+
+// src/components/AllArtifacts.jsx
+import { Link } from 'react-router'; // CORRECTED: Import Link from 'react-router-dom'
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import useFeaturedArtifacts from './UseFeatured';
+import { useState, useEffect } from 'react'; // Added useEffect to fetch all artifacts
+import axios from 'axios'; // Added axios for fetching all artifacts
+
+// Define your API base URL using environment variables for production
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
 const AllArtifacts = () => {
-  const { artifacts, loading, error } = useFeaturedArtifacts();
+  const [artifacts, setArtifacts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter artifacts based on search input
+  useEffect(() => {
+    const fetchAllArtifacts = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        // Changed to hit the /artifacts/all endpoint directly for all artifacts
+        const response = await axios.get(`${API_BASE_URL}/artifacts`);
+        setArtifacts(response.data);
+      } catch (err) {
+        console.error('Failed to fetch all artifacts:', err);
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAllArtifacts();
+  }, []); 
   const filteredArtifacts = artifacts.filter(artifact =>
     artifact.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
