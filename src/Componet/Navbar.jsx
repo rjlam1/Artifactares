@@ -63,12 +63,20 @@ const Navbar = () => {
           </Link>
 
           {user && (
+          <>
             <Link
               to="/addArtifacts"
               className="hover:text-gray-300 block md:inline"
             >
               Add Artifacts
             </Link>
+            <Link
+              to="/my-artifacts"
+              className="hover:text-gray-300 block md:inline"
+            >
+             My Artifacts
+            </Link>
+          </>
           )}
 
           

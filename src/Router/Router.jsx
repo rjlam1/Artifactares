@@ -56,6 +56,7 @@ import Register from '../Pages/Register';
 import MainLayout from '../Layout/Mainlaout'; 
 import PrivateRoute from '../PrivateRouter/PrivateRouter';
 import ArtifactDetail from '../Pages/ArtiFactsDetails';
+import MyArtifacts from '../Pages/MyArtiFacts';
 
 const Router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path:"/my-artifacts",
+        element:<PrivateRoute><MyArtifacts></MyArtifacts></PrivateRoute>
+      }
 
       // {
       //   path: "*",
