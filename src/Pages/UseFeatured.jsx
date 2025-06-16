@@ -15,7 +15,7 @@ const useFeaturedArtifacts = () => {
         setLoading(true);
         const response = await axios.get(`${API_BASE_URL}/artifacts/featured`);
         
-        // Validate response data
+       
         if (response.data && Array.isArray(response.data)) {
           setArtifacts(response.data);
         } else {
