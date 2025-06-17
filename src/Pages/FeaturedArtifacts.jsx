@@ -7,7 +7,7 @@ const FeaturedArtifacts = () => {
 
   if (loading) {
     return (
-      <section className="my-24 px-4 max-w-9xl mx-auto">
+      <section className="my-12 px-4 max-w-9xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,15 +42,17 @@ const FeaturedArtifacts = () => {
 
   if (error) {
     return (
-      <section className="my-24 px-4 max-w-8xl mx-auto text-center">
+      <section className="my-12 px-4 max-w-8xl mx-auto text-center">
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-5xl font-bold mb-10"
         >
-          <span className="bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
-            Curated Masterpieces
-          </span>
+        
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
+  Curated Masterpieces
+</span>
+
         </motion.h2>
         <motion.div 
           initial={{ scale: 0.9 }}

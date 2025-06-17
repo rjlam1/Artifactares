@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-gray-900 to-stone-900 text-white py-4 sticky top-0 z-50 shadow-lg border-b border-stone-700/50 backdrop-blur-sm">
       <div className="container mx-auto  flex items-center justify-between">
-        {/* Logo/Brand */}
+     
         <Link 
           to="/" 
           className="text-2xl font-bold flex items-center hover:text-amber-400 transition-colors group"

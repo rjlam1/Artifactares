@@ -20,7 +20,7 @@ A full-stack web application for tracking, showcasing, and managing historical a
 
 ## 🚀 Live Site
 
-🔗 [Visit Live Site](https://historical-artifacts.web.app)
+🔗 [Visit Live Site](https://artifactare.web.app/)
 
 ---
 

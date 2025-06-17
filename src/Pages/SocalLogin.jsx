@@ -22,9 +22,6 @@ const SocialLogin = ({ from }) => {
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-stone-300"></div>
         </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-white text-stone-500">OR</span>
-        </div>
       </div>
 
       <motion.button
