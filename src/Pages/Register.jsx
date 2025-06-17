@@ -17,7 +17,7 @@ const Register = () => {
     const photo = form.photo.value;
     const password = form.password.value;
 
-    // Password validation
+
     const hasUpperCase = /[A-Z]/.test(password);
     const hasLowerCase = /[a-z]/.test(password);
     const isValidLength = password.length >= 6;
@@ -27,12 +27,12 @@ const Register = () => {
       return;
     }
 
-    // Register the user
+   
     createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
 
-        // Update displayName and photoURL
+  
         updateUserProfile({
           displayName: name,
           photoURL: photo,

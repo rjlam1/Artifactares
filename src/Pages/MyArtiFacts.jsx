@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
 import { Helmet } from "react-helmet";
+import Loader from "./Loader";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
@@ -114,47 +115,48 @@ const MyArtifacts = () => {
         </div>
 
         {loading ? (
-          <div className="overflow-x-auto">
-            <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
-              <table className="min-w-full divide-y divide-gray-700">
-                <thead className="bg-gray-700">
-                  <tr>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Artifact</th>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Era</th>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th>
-                  </tr>
-                </thead>
-                <tbody className="bg-gray-800 divide-y divide-gray-700">
-                  {[...Array(5)].map((_, index) => (
-                    <tr key={index}>
-                      <td className="px-4 py-4 whitespace-nowrap animate-pulse">
-                        <div className="flex items-center">
-                          <div className="flex-shrink-0 h-10 w-10 bg-gray-700 rounded-md"></div>
-                          <div className="ml-3">
-                            <div className="h-4 w-32 bg-gray-700 rounded"></div>
-                            <div className="h-3 w-24 bg-gray-700 rounded mt-2"></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 whitespace-nowrap animate-pulse">
-                        <div className="h-4 w-20 bg-gray-700 rounded"></div>
-                      </td>
-                      <td className="px-4 py-4 whitespace-nowrap animate-pulse">
-                        <div className="h-4 w-16 bg-gray-700 rounded"></div>
-                      </td>
-                      <td className="px-4 py-4 whitespace-nowrap animate-pulse">
-                        <div className="flex space-x-2">
-                          <div className="h-8 w-16 bg-gray-700 rounded"></div>
-                          <div className="h-8 w-16 bg-gray-700 rounded"></div>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <Loader></Loader>
+          // <div className="overflow-x-auto">
+          //   <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+          //     <table className="min-w-full divide-y divide-gray-700">
+          //       <thead className="bg-gray-700">
+          //         <tr>
+          //           <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Artifact</th>
+          //           <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
+          //           <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Era</th>
+          //           <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th>
+          //         </tr>
+          //       </thead>
+          //       <tbody className="bg-gray-800 divide-y divide-gray-700">
+          //         {[...Array(5)].map((_, index) => (
+          //           <tr key={index}>
+          //             <td className="px-4 py-4 whitespace-nowrap animate-pulse">
+          //               <div className="flex items-center">
+          //                 <div className="flex-shrink-0 h-10 w-10 bg-gray-700 rounded-md"></div>
+          //                 <div className="ml-3">
+          //                   <div className="h-4 w-32 bg-gray-700 rounded"></div>
+          //                   <div className="h-3 w-24 bg-gray-700 rounded mt-2"></div>
+          //                 </div>
+          //               </div>
+          //             </td>
+          //             <td className="px-4 py-4 whitespace-nowrap animate-pulse">
+          //               <div className="h-4 w-20 bg-gray-700 rounded"></div>
+          //             </td>
+          //             <td className="px-4 py-4 whitespace-nowrap animate-pulse">
+          //               <div className="h-4 w-16 bg-gray-700 rounded"></div>
+          //             </td>
+          //             <td className="px-4 py-4 whitespace-nowrap animate-pulse">
+          //               <div className="flex space-x-2">
+          //                 <div className="h-8 w-16 bg-gray-700 rounded"></div>
+          //                 <div className="h-8 w-16 bg-gray-700 rounded"></div>
+          //               </div>
+          //             </td>
+          //           </tr>
+          //         ))}
+          //       </tbody>
+          //     </table>
+          //   </div>
+          // </div>
         ) : myArtifacts.length === 0 ? (
           <motion.div
             initial={{ scale: 0.95 }}

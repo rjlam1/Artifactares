@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
+  const [direction, setDirection] = useState(1); 
 
   const slides = [
     {
@@ -91,7 +91,7 @@ const Banner = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Navigation Arrows */}
+     
       <motion.button 
         onClick={goToPrevSlide}
         className="absolute left-4 top-1/2 z-20 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
@@ -116,7 +116,7 @@ const Banner = () => {
         </svg>
       </motion.button>
 
-      {/* Slides */}
+     
       <div className="relative w-full h-full">
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
@@ -137,7 +137,7 @@ const Banner = () => {
               backgroundPosition: 'center',
             }}
           >
-            {/* Gradient Overlay */}
+           
             <motion.div 
               className="absolute inset-0"
               initial={{ opacity: 0 }}
@@ -149,7 +149,7 @@ const Banner = () => {
               }}
             ></motion.div>
             
-            {/* Content */}
+        
             <motion.div 
               className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-4/5 md:w-2/3 lg:w-1/2 px-4"
               initial="hidden"
@@ -186,7 +186,7 @@ const Banner = () => {
         </AnimatePresence>
       </div>
 
-      {/* Indicators */}
+     
       <div className="flex justify-center gap-3 absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         {slides.map((_, index) => (
           <motion.button
@@ -207,7 +207,7 @@ const Banner = () => {
         ))}
       </div>
 
-      {/* Progress Bar */}
+   
       <div className="absolute bottom-0 left-0 right-0 h-1 z-20 bg-gray-300 bg-opacity-30 overflow-hidden">
         <motion.div 
           className="h-full bg-white"

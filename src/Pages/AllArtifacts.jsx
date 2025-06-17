@@ -117,14 +117,14 @@ const AllArtifacts = () => {
 
   return (
     <section className="py-12 px-4 md:px-8  min-h-screen bg-gradient-to-r from-gray-800 to-gray-900">
-      {/* Decorative background elements */}
+      
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-amber-200/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-stone-300/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-8xl mx-auto relative">
-        {/* Header */}
+      
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ const AllArtifacts = () => {
           </p>
         </motion.div>
 
-        {/* Search and Filter Panel */}
+       
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -168,7 +168,7 @@ const AllArtifacts = () => {
               />
             </div>
             
-            {/* Sort Options */}
+      
             <div className="flex items-center gap-3 w-full md:w-auto">
               <label htmlFor="sort" className="text-sm font-medium text-stone-700 whitespace-nowrap">
                 Sort by:
@@ -193,7 +193,7 @@ const AllArtifacts = () => {
             </div>
           </div>
 
-          {/* Filter Chips */}
+     
           <div className="mt-6">
             <h4 className="text-sm font-medium text-stone-500 mb-3">FILTER BY CATEGORY:</h4>
             <div className="flex flex-wrap gap-3">
@@ -214,7 +214,7 @@ const AllArtifacts = () => {
           </div>
         </motion.div>
 
-        {/* Artifacts Grid */}
+  
         {filteredArtifacts.length === 0 ? (
           <motion.div
             initial={{ opacity: 0 }}
@@ -260,7 +260,7 @@ const AllArtifacts = () => {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-stone-200/50"
               >
-                {/* Image with overlay */}
+                
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={artifact.image}
@@ -269,7 +269,7 @@ const AllArtifacts = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   
-                  {/* Like count */}
+               
                   <div className="absolute top-4 right-4 flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/30 backdrop-blur-sm">
                     <svg className="w-4 h-4 text-amber-300" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
@@ -277,7 +277,7 @@ const AllArtifacts = () => {
                     <span className="text-xs font-medium text-white">{artifact.likeCount}</span>
                   </div>
                   
-                  {/* Category badge */}
+               
                   {artifact.category && (
                     <div className="absolute top-4 left-4">
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-stone-800 backdrop-blur-sm">
@@ -287,7 +287,7 @@ const AllArtifacts = () => {
                   )}
                 </div>
                 
-                {/* Content */}
+              
                 <div className="p-5">
                   <h3 className="text-xl font-bold text-stone-900 mb-2 line-clamp-1">{artifact.name}</h3>
                   <p className="text-stone-600 text-sm mb-4 line-clamp-2">

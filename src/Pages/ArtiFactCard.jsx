@@ -23,7 +23,7 @@ const ArtifactCard = ({ artifact }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Artifact Image with Overlay */}
+     
       <div className="relative h-48 overflow-hidden">
         <Helmet>
           <title>ArtifactEra | LikedArtifact</title>
@@ -37,7 +37,7 @@ const ArtifactCard = ({ artifact }) => {
           transition={{ duration: 0.3 }}
         />
         
-        {/* Premium Badge */}
+   
         {artifact.premium && (
           <div className="absolute top-2 left-2 bg-gradient-to-r from-amber-400 to-amber-600 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center">
             <StarIcon className="h-3 w-3 mr-1" />
@@ -45,7 +45,7 @@ const ArtifactCard = ({ artifact }) => {
           </div>
         )}
 
-        {/* Like Button */}
+      
         <button 
           onClick={() => setIsLiked(!isLiked)}
           className={`absolute top-2 right-2 p-2 rounded-full transition-all ${isLiked ? 'bg-rose-500 text-white' : 'bg-white/90 text-gray-800 hover:bg-rose-50'}`}
@@ -54,7 +54,7 @@ const ArtifactCard = ({ artifact }) => {
         </button>
       </div>
 
-      {/* Artifact Details */}
+     
       <div className="p-5">
         <div className="flex justify-between items-start mb-3">
           <h3 className="text-lg font-bold text-gray-800 dark:text-white line-clamp-1">
@@ -69,7 +69,7 @@ const ArtifactCard = ({ artifact }) => {
           {artifact.shortDescription || artifact.historicalContext || "No description available"}
         </p>
 
-        {/* Detailed Information Grid */}
+      
         <div className="grid grid-cols-2 gap-3 text-xs mb-4 ">
           <div className="flex items-start gap-2">
             <CalendarIcon className="h-4 w-4 mt-0.5 text-gray-500 dark:text-gray-400" />
@@ -112,7 +112,7 @@ const ArtifactCard = ({ artifact }) => {
           </div>
         </div>
 
-        {/* Like Count and Actions */}
+       
         <div className="flex justify-between items-center pt-3 border-t border-gray-200 dark:border-gray-700">
           <div className="flex items-center text-sm">
             <HeartIcon className="h-4 w-4 text-rose-500 mr-1" />

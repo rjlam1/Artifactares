@@ -142,7 +142,7 @@ const ArtifactDetail = () => {
 
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-          {/* Artifact Header */}
+         
           <div className="relative h-64 bg-gradient-to-r from-gray-900 to-gray-700 flex items-center justify-center">
             <div className="absolute inset-0 bg-black opacity-40"></div>
             <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white text-center px-4">
@@ -150,10 +150,10 @@ const ArtifactDetail = () => {
             </h1>
           </div>
 
-          {/* Main Content */}
+       
           <div className="p-8 md:p-10">
             <div className="flex flex-col lg:flex-row gap-10">
-              {/* Image Section */}
+             
               <div className="lg:w-1/2">
                 <div className="relative rounded-xl overflow-hidden shadow-lg h-96 bg-gray-100">
                   <img
@@ -168,7 +168,7 @@ const ArtifactDetail = () => {
                 </div>
               </div>
 
-              {/* Details Section */}
+            
               <div className="lg:w-1/2">
                 <div className="space-y-6">
                   <div className="border-b border-gray-200 pb-6">

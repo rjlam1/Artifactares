@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      // Generate JWT token after login
+
       const token = await userCredential.user.getIdToken();
       localStorage.setItem('token', token);
       return userCredential;
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const result = await signInWithPopup(auth, provider);
-      // Generate JWT token after Google login
+     
       const token = await result.user.getIdToken();
       localStorage.setItem('token', token);
       return result;
@@ -75,7 +75,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
-        // Refresh token on auth state change
+      
         const token = await currentUser.getIdToken();
         localStorage.setItem('token', token);
       }

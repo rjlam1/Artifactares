@@ -31,11 +31,11 @@ const EvolutionTimeline = () => {
         </motion.div>
         
         <div className="relative">
-          {/* Decorative background elements */}
+      
           <div className="absolute -left-20 top-0 w-40 h-40 rounded-full bg-amber-50 blur-3xl opacity-60"></div>
           <div className="absolute -right-20 bottom-0 w-40 h-40 rounded-full bg-amber-100 blur-3xl opacity-30"></div>
           
-          {/* Timeline line */}
+      
           <div className="absolute left-6 h-full w-0.5 bg-gradient-to-b from-transparent via-amber-300 to-transparent">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-100 to-transparent opacity-60"></div>
           </div>
@@ -53,7 +53,7 @@ const EvolutionTimeline = () => {
               viewport={{ once: true, margin: "-50px" }}
               className="relative pl-16 mb-16 last:mb-0 group"
             >
-              {/* Timeline dot */}
+            
               <div className="absolute left-0 top-0 w-12 h-12 flex items-center justify-center">
                 <motion.div 
                   whileHover={{ scale: 1.2 }}
@@ -68,12 +68,12 @@ const EvolutionTimeline = () => {
                 ></motion.div>
               </div>
               
-              {/* Content card */}
+            
               <motion.div
                 whileHover={{ y: -5 }}
                 className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-all duration-300 relative overflow-hidden"
               >
-                {/* Card background pattern */}
+                
                 <div className="absolute inset-0 opacity-5">
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGExMzYiIHN0cm9rZS13aWR0aD0iMC41Ij48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9zdmc+')]"></div>
                 </div>
@@ -89,12 +89,12 @@ const EvolutionTimeline = () => {
                   <p className="text-stone-600 leading-relaxed text-lg">{event.detail}</p>
                 </div>
                 
-                {/* Decorative elements */}
+              
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-amber-100 rounded-full opacity-10"></div>
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-amber-200 rounded-full opacity-5"></div>
               </motion.div>
               
-              {/* Connector line between dots */}
+             
               {index !== events.length - 1 && (
                 <div className="absolute left-6 top-12 h-[calc(100%+2rem)] w-0.5 bg-gradient-to-b from-amber-100 via-amber-200 to-amber-100">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-50 to-transparent opacity-70"></div>

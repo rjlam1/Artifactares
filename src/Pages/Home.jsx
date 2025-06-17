@@ -43,7 +43,7 @@ const Home = () => {
         <meta property="og:description" content="Discover fascinating artifacts, their evolution timeline, and the discoverers who found them." />
       </Helmet>
       
-      {/* Main Content */}
+      
       <main className="w-full">
         <Banner />
         
