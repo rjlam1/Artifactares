@@ -1,33 +1,34 @@
-import React from 'react';
-import { createBrowserRouter } from "react-router"; 
-import Home from '../Pages/Home';
-import AllArtifacts from '../Pages/Allartifacts';
-import AddArtifacts from '../Pages/AddArtifacts';
-import Login from '../Pages/Login';
-import Register from '../Pages/Register';
-import MainLayout from '../Layout/Mainlaout'; 
-import PrivateRoute from '../PrivateRouter/PrivateRouter';
-import ArtifactDetail from '../Pages/ArtiFactsDetails';
-import MyArtifacts from '../Pages/MyArtiFacts';
-import UpdateArtifact from '../Pages/UpdateArtifacts';
-import NotFound from '../Pages/NotFound';
+import React from "react";
+import { createBrowserRouter } from "react-router";
+import Home from "../Pages/Home";
+import AllArtifacts from "../Pages/Allartifacts";
+import AddArtifacts from "../Pages/AddArtifacts";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import MainLayout from "../Layout/Mainlaout";
+import PrivateRoute from "../PrivateRouter/PrivateRouter";
+import ArtifactDetail from "../Pages/ArtiFactsDetails";
+import MyArtifacts from "../Pages/MyArtiFacts";
+import UpdateArtifact from "../Pages/UpdateArtifacts";
+import NotFound from "../Pages/NotFound";
+import LikedArtifacts from "../Pages/LikeArtifacts";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />, 
+    element: <MainLayout />,
     // errorElement: <ErrorPage />,
     children: [
       {
-        index: true, 
-        element: <Home />, 
+        index: true,
+        element: <Home />,
       },
       {
-        path: 'allArtifacts',
-        element: <AllArtifacts />, 
+        path: "allArtifacts",
+        element: <AllArtifacts />,
       },
       {
-        path: 'addArtifacts',
+        path: "addArtifacts",
         element: (
           <PrivateRoute>
             <AddArtifacts />
@@ -35,11 +36,11 @@ const Router = createBrowserRouter([
         ),
       },
       {
-        path: 'login',
-        element: <Login />, 
+        path: "login",
+        element: <Login />,
       },
       {
-        path: 'register',
+        path: "register",
         element: <Register />,
       },
       {
@@ -51,22 +52,31 @@ const Router = createBrowserRouter([
         ),
       },
       {
-        path:"/my-artifacts",
-        element:<PrivateRoute><MyArtifacts></MyArtifacts></PrivateRoute>
+        path: "/my-artifacts",
+        element: (
+          <PrivateRoute>
+            <MyArtifacts></MyArtifacts>
+          </PrivateRoute>
+        ),
       },
       {
-  path: "/update/:id",
-  element: <PrivateRoute><UpdateArtifact></UpdateArtifact></PrivateRoute>,
-}
-,
-
+        path:"/liked-artifacts",element:<PrivateRoute><LikedArtifacts></LikedArtifacts></PrivateRoute>
+      }
+      ,{
+        path: "/update/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateArtifact></UpdateArtifact>
+          </PrivateRoute>
+        ),
+      },
+       
       {
         path: "*",
         element: <NotFound></NotFound>,
-      }
+      },
     ],
   },
-
 ]);
 
 export default Router;

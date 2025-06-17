@@ -147,6 +147,21 @@ const Navbar = () => {
                   />
                 )}
               </Link>
+              <Link
+                to="/liked-artifacts"
+                className={`relative px-3 py-1.5 hover:text-amber-300 transition-colors ${
+                  activeRoute === "/liked-artifacts" ? "text-amber-300 font-medium" : "text-stone-300"
+                }`}
+              >
+               Liked Artifacts
+                {activeRoute === "/liked-artifacts" && (
+                  <motion.span 
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400"
+                    layoutId="navIndicator"
+                    transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
+                  />
+                )}
+              </Link>
             </>
           )}
 
@@ -191,6 +206,20 @@ const Navbar = () => {
                     <p className="text-sm font-medium text-white truncate">{user.displayName}</p>
                     <p className="text-xs text-stone-400 truncate">{user.email}</p>
                   </div>
+                  {/* <Link
+                    to="/my-artifacts"
+                    className="block px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-300"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    My Artifacts
+                  </Link> */}
+                  <Link
+                    to="/liked-artifacts"
+                    className="block px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-300"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Liked Artifacts
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="block w-full text-left px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-300 focus:outline-none border-t border-stone-700/50"
@@ -262,7 +291,7 @@ const Navbar = () => {
                   >
                     Add Artifacts
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/my-artifacts"
                     className={`py-3 px-4 rounded-lg hover:bg-stone-800/50 transition-colors ${
                       activeRoute === "/my-artifacts" ? "text-amber-300 font-medium bg-stone-800/30" : "text-stone-300"
@@ -270,16 +299,13 @@ const Navbar = () => {
                     onClick={toggleMobileMenu}
                   >
                     My Artifacts
-                  </Link>
+                  </Link> */}
                 </>
               )}
 
               {user ? (
                 <>
-                  <div className="pt-4 pb-2 border-t border-stone-700/50">
-                    <p className="text-sm font-medium text-white">{user.displayName}</p>
-                    <p className="text-xs text-stone-400 truncate">{user.email}</p>
-                  </div>
+                 
                   <Link
                     to="/my-artifacts"
                     className="py-3 px-4 rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-300 transition-colors"
@@ -294,6 +320,10 @@ const Navbar = () => {
                   >
                     Liked Artifacts
                   </Link>
+                   <div className="pt-4 pb-2 border-t border-stone-700/50">
+                    <p className="text-sm font-medium text-white">{user.displayName}</p>
+                    <p className="text-xs text-stone-400 truncate">{user.email}</p>
+                  </div>
                   <button
                     onClick={() => {
                       handleLogout();
@@ -303,6 +333,7 @@ const Navbar = () => {
                   >
                     Logout
                   </button>
+                  
                 </>
               ) : (
                 <>
