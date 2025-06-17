@@ -4,6 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const UpdateArtifact = () => {
   const { id } = useParams();
@@ -102,6 +103,9 @@ const UpdateArtifact = () => {
         className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800"
       >
         <div className="max-w-8xl w-full mx-4 bg-gray-800 rounded-xl shadow-xl p-8 border border-gray-700">
+          <Helmet>
+            <title>ArtifactEra | UpdateArtifact</title>
+          </Helmet>
           <div className="animate-pulse space-y-6">
             <div className="h-8 w-1/3 bg-gray-700 rounded-full mx-auto"></div>
             <div className="space-y-4">

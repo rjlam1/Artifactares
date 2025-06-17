@@ -10,6 +10,7 @@ import {
   StarIcon
 } from "@heroicons/react/24/solid";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const ArtifactCard = ({ artifact }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -24,6 +25,9 @@ const ArtifactCard = ({ artifact }) => {
     >
       {/* Artifact Image with Overlay */}
       <div className="relative h-48 overflow-hidden">
+        <Helmet>
+          <title>ArtifactEra | LikedArtifact</title>
+        </Helmet>
         <motion.img
           src={artifact.image || "https://via.placeholder.com/300x200?text=Artifact"}
           alt={artifact.name || "Artifact image"}

@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
@@ -89,6 +90,9 @@ const ArtifactDetail = () => {
   if (loading || authLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
+        <Helmet>
+          <title>ArtifactEra | ArtifactDetails</title>
+        </Helmet>
         <div className="animate-pulse flex flex-col items-center">
           <div className="w-12 h-12 bg-gray-200 rounded-full mb-4"></div>
           <div className="h-4 bg-gray-200 rounded w-32"></div>

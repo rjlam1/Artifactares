@@ -1,8 +1,14 @@
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 
 const NotFound = () => {
   return (
+    <>
+    <Helmet>
+      <title>ArtifactEra | NotFound</title>
+    </Helmet>
+    
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -78,6 +84,7 @@ const NotFound = () => {
         </motion.div>
       </motion.div>
     </motion.div>
+    </>
   );
 };
 

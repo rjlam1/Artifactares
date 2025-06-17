@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
@@ -94,6 +95,11 @@ const MyArtifacts = () => {
       className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800"
     >
       <div className="max-w-8xl mx-auto">
+        <Helmet>
+          <title>
+            ArtifactEra | MyArtifact
+          </title>
+        </Helmet>
         <div className="text-center mb-8">
           <motion.h2 
             initial={{ y: -20 }}

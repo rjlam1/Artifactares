@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -127,6 +128,9 @@ const AddArtifact = () => {
       />
 
       <div className="max-w-8xl mx-auto">
+        <Helmet>
+          <title>ArtifactEra | AddArtifact</title>
+        </Helmet>
         <motion.div
           initial={{ y: -20 }}
           animate={{ y: 0 }}

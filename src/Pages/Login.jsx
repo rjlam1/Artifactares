@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
 import { toast } from "react-hot-toast";
 import { motion } from "framer-motion";
 import SocialLogin from "./SocalLogin";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signin } = useContext(AuthContext);
@@ -44,6 +45,9 @@ const Login = () => {
         className="w-full max-w-md mx-4 bg-white rounded-2xl shadow-xl overflow-hidden border border-stone-200"
       >
         <div className="p-8">
+          <Helmet>
+            <title>ArtifactEra | Login</title>
+          </Helmet>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

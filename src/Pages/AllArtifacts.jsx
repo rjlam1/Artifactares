@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
@@ -67,6 +68,9 @@ const AllArtifacts = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-50 to-stone-100">
+         <Helmet>
+          <title>ArtifactEra | AllArtifact</title>
+        </Helmet>
         <div className="text-center">
           <motion.div
             animate={{ rotate: 360 }}
@@ -89,6 +93,7 @@ const AllArtifacts = () => {
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-50 to-stone-100 p-4">
+       
         <motion.div 
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

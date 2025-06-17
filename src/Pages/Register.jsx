@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
 import { toast } from "react-hot-toast";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -63,6 +64,9 @@ const Register = () => {
         className="w-full max-w-md mx-4 bg-white rounded-2xl shadow-xl overflow-hidden border border-stone-200"
       >
         <div className="p-8">
+          <Helmet>
+            <title>ArtifactEra | Register</title>
+          </Helmet>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
