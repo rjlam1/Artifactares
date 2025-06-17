@@ -11,7 +11,7 @@ const events = [
 const EvolutionTimeline = () => {
   return (
     <section className="py-20 px-4 md:px-10 bg-gradient-to-b from-stone-50 to-stone-100">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const EvolutionTimeline = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800">
             The Evolution of Artifacts
           </h2>
-          <p className="max-w-2xl mx-auto text-stone-500 text-lg">
+          <p className="max-w-2xl mx-auto t  text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 ">
             Tracing humanity's progress through significant historical objects
           </p>
         </motion.div>

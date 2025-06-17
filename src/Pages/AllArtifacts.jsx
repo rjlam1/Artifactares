@@ -92,7 +92,7 @@ const AllArtifacts = () => {
         <motion.div 
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="text-center p-8 bg-white rounded-2xl shadow-xl max-w-md border border-stone-200"
+          className="text-center  bg-white rounded-2xl shadow-xl max-w-9xl border border-stone-200"
         >
           <div className="text-6xl mb-4">🔍</div>
           <h3 className="text-2xl font-bold text-stone-900 mb-3">Discovery Interrupted</h3>
@@ -111,14 +111,14 @@ const AllArtifacts = () => {
   }
 
   return (
-    <section className="py-12 px-4 md:px-8 min-h-screen bg-gradient-to-r from-gray-800 to-gray-900">
+    <section className="py-12 px-4 md:px-8  min-h-screen bg-gradient-to-r from-gray-800 to-gray-900">
       {/* Decorative background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-amber-200/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-stone-300/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-8xl mx-auto relative">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -245,7 +245,7 @@ const AllArtifacts = () => {
             </div>
           </motion.div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredArtifacts.map((artifact, index) => (
               <motion.div
                 key={artifact._id}

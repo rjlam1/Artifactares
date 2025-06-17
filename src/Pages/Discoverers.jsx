@@ -28,7 +28,7 @@ const discoverers = [
 const Discoverers = () => {
   return (
     <section className="py-20 px-4 md:px-10 bg-gradient-to-b from-gray-50 to-amber-50">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const Discoverers = () => {
           <span className="inline-block mb-4 text-amber-600 text-lg font-semibold">
             Pioneers of Archaeology
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-5xl mx-auto  mb-6 font-bold  text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800">
             🔍 Legendary Discoverers
           </h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>

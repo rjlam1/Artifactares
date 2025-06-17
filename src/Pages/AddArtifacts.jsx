@@ -126,16 +126,16 @@ const AddArtifact = () => {
         toastClassName="bg-gray-800 border border-gray-700"
       />
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <motion.div
           initial={{ y: -20 }}
           animate={{ y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-6"
         >
           <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 sm:text-5xl">
             Contribute to History
           </h1>
-          <p className="mt-4 text-xl text-gray-400">
+          <p className="text-lg mt-4 text-stone-600 max-w-2xl mx-auto">
             Add your artifact to our digital museum
           </p>
         </motion.div>

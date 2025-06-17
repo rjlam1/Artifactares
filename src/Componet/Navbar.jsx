@@ -52,7 +52,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-gray-900 to-stone-900 text-white py-4 sticky top-0 z-50 shadow-lg border-b border-stone-700/50 backdrop-blur-sm">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto  flex items-center justify-between">
         {/* Logo/Brand */}
         <Link 
           to="/" 
@@ -213,13 +213,13 @@ const Navbar = () => {
                   >
                     My Artifacts
                   </Link> */}
-                  <Link
+                  {/* <Link
                     to="/liked-artifacts"
                     className="block px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-300"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     Liked Artifacts
-                  </Link>
+                  </Link> */}
                   <button
                     onClick={handleLogout}
                     className="block w-full text-left px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-300 focus:outline-none border-t border-stone-700/50"

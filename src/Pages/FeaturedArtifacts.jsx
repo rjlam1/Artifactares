@@ -42,7 +42,7 @@ const FeaturedArtifacts = () => {
 
   if (error) {
     return (
-      <section className="my-24 px-4 max-w-7xl mx-auto text-center">
+      <section className="my-24 px-4 max-w-8xl mx-auto text-center">
         <motion.h2 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -76,7 +76,7 @@ const FeaturedArtifacts = () => {
   }
 
   return (
-    <section className="my-24 px-4 max-w-7xl mx-auto">
+    <section className="my-24 px-4 max-w-8xl mx-auto">
       <motion.h2 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -57,8 +57,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-[#0a1f38] to-[#0e2745] text-[#d2b44c] pt-16 pb-8">
-      <div className="container mx-auto px-6">
+    <footer className="bg-gradient-to-b px-6 lg:px-0 from-[#0a1f38] to-[#0e2745] text-[#d2b44c] pt-16 pb-8">
+      <div className="container mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Column */}
           <motion.div 

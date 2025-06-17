@@ -1,82 +1,3 @@
-// import { useLoaderData, useNavigate, useParams } from "react-router";
-// import { useContext, useEffect, useState } from "react";
-// import axios from "axios";
-// import Swal from "sweetalert2";
-// import { AuthContext } from "../AuthProvider/AuthContext/AuthProvider";
-
-// const UpdateArtifact = () => {
-//   const { id } = useParams();
-//   const navigate = useNavigate();
-//   const { user } = useContext(AuthContext)
-//   const [artifact, setArtifact] = useState(null);
-
-//   useEffect(() => {
-//     const fetchArtifact = async () => {
-//       const token = await user.getIdToken();
-//       const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/artifacts/${id}`, {
-//         headers: { Authorization: `Bearer ${token}` },
-//       });
-//       setArtifact(res.data);
-//     };
-//     if (user) fetchArtifact();
-//   }, [id, user]);
-
-//   const handleUpdate = async (e) => {
-//     e.preventDefault();
-//     const form = e.target;
-//     const updatedArtifact = {
-//       name: form.name.value,
-//       image: form.image.value,
-//       type: form.type.value,
-//       context: form.context.value,
-//       createdAt: form.createdAt.value,
-//       discoveredAt: form.discoveredAt.value,
-//       discoveredBy: form.discoveredBy.value,
-//       presentLocation: form.presentLocation.value,
-//     };
-
-//     try {
-//       const token = await user.getIdToken();
-//       await axios.put(`${import.meta.env.VITE_API_BASE_URL}/artifacts/${id}`, updatedArtifact, {
-//         headers: { Authorization: `Bearer ${token}` },
-//       });
-//       Swal.fire("Updated!", "Your artifact was successfully updated.", "success");
-//       navigate("/my-artifacts");
-//     } catch (error) {
-//       Swal.fire("Error", error.response?.data?.error || "Failed to update", "error");
-//     }
-//   };
-
-//   if (!artifact) return <p className="text-center mt-10">Loading artifact details...</p>;
-
-//   return (
-//     <div className="max-w-2xl mx-auto mt-10 bg-white shadow p-6 rounded-xl">
-//       <h2 className="text-2xl font-semibold mb-4 text-center">Update Artifact</h2>
-//       <form onSubmit={handleUpdate} className="grid gap-4">
-//         <input name="name" defaultValue={artifact.name} className="input" placeholder="Artifact Name" required />
-//         <input name="image" defaultValue={artifact.image} className="input" placeholder="Image URL" required />
-//         <select name="type" defaultValue={artifact.type} className="input" required>
-//           <option value="">Select Type</option>
-//           <option>Tools</option>
-//           <option>Weapons</option>
-//           <option>Documents</option>
-//           <option>Writings</option>
-//         </select>
-//         <textarea name="context" defaultValue={artifact.context} className="input" placeholder="Historical Context" required />
-//         <input name="createdAt" defaultValue={artifact.createdAt} className="input" placeholder="Created At (e.g. 100 BC)" required />
-//         <input name="discoveredAt" defaultValue={artifact.discoveredAt} className="input" placeholder="Discovered At" required />
-//         <input name="discoveredBy" defaultValue={artifact.discoveredBy} className="input" placeholder="Discovered By" required />
-//         <input name="presentLocation" defaultValue={artifact.presentLocation} className="input" placeholder="Present Location" required />
-//         <button type="submit" className="btn btn-primary w-full">Update Artifact</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default UpdateArtifact;
-
-
-
 import { useParams, useNavigate } from "react-router";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
@@ -180,7 +101,7 @@ const UpdateArtifact = () => {
         animate={{ opacity: 1 }}
         className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800"
       >
-        <div className="max-w-2xl w-full mx-4 bg-gray-800 rounded-xl shadow-xl p-8 border border-gray-700">
+        <div className="max-w-8xl w-full mx-4 bg-gray-800 rounded-xl shadow-xl p-8 border border-gray-700">
           <div className="animate-pulse space-y-6">
             <div className="h-8 w-1/3 bg-gray-700 rounded-full mx-auto"></div>
             <div className="space-y-4">
@@ -202,7 +123,7 @@ const UpdateArtifact = () => {
         animate={{ opacity: 1 }}
         className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800"
       >
-        <div className="text-center p-8 bg-gray-800 rounded-xl shadow-xl border border-gray-700 max-w-md">
+        <div className="text-center p-8 bg-gray-800 rounded-xl shadow-xl border border-gray-700 max-w-8xl">
           <svg
             className="mx-auto h-16 w-16 text-amber-500"
             fill="none"
@@ -238,7 +159,7 @@ const UpdateArtifact = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800"
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <motion.div
           initial={{ y: -20 }}
           animate={{ y: 0 }}
