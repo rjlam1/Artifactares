@@ -87,11 +87,11 @@ const Banner = () => {
 
   return (
     <div 
-      className="w-full h-[80vh] relative overflow-hidden"
+      className="w-full h-[70vh] relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-     
+      {/* prev button */}
       <motion.button 
         onClick={goToPrevSlide}
         className="absolute left-4 top-1/2 z-20 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
@@ -103,7 +103,8 @@ const Banner = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </motion.button>
-      
+
+      {/* next button */}
       <motion.button 
         onClick={goToNextSlide}
         className="absolute right-4 top-1/2 z-20 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
@@ -116,7 +117,7 @@ const Banner = () => {
         </svg>
       </motion.button>
 
-     
+      {/* slide with overlay and text */}
       <div className="relative w-full h-full">
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
@@ -137,36 +138,28 @@ const Banner = () => {
               backgroundPosition: 'center',
             }}
           >
-           
+            {/* overlay */}
             <motion.div 
               className="absolute inset-0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
               style={{ 
-                backgroundColor: slides[currentSlide].overlayColor,
                 background: `linear-gradient(to right, ${slides[currentSlide].overlayColor}, rgba(0,0,0,0.3))`
               }}
             ></motion.div>
-            
-        
+
+            {/* text content */}
             <motion.div 
               className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-4/5 md:w-2/3 lg:w-1/2 px-4"
               initial="hidden"
               animate="visible"
               variants={contentVariants}
             >
-              <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
-                variants={contentVariants}
-              >
+              <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={contentVariants}>
                 {slides[currentSlide].title}
               </motion.h1>
-              <motion.p 
-                className="text-xl md:text-2xl mb-8"
-                variants={contentVariants}
-                transition={{ delay: 0.2 }}
-              >
+              <motion.p className="text-xl md:text-2xl mb-8" variants={contentVariants} transition={{ delay: 0.2 }}>
                 {slides[currentSlide].description}
               </motion.p>
               <motion.button 
@@ -186,7 +179,7 @@ const Banner = () => {
         </AnimatePresence>
       </div>
 
-     
+      {/* indicators */}
       <div className="flex justify-center gap-3 absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         {slides.map((_, index) => (
           <motion.button
@@ -207,7 +200,7 @@ const Banner = () => {
         ))}
       </div>
 
-   
+      {/* progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 z-20 bg-gray-300 bg-opacity-30 overflow-hidden">
         <motion.div 
           className="h-full bg-white"
