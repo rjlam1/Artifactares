@@ -51,8 +51,6 @@ const LikedArtifacts = () => {
           signal: controller.signal,
         });
 
-        
-
         if (!res.data || !Array.isArray(res.data)) {
           throw new Error("Invalid response format");
         }
@@ -196,27 +194,25 @@ const LikedArtifacts = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12  sm:px-6 lg:px-8"
     >
       <div className="max-w-8xl mx-auto">
         <div className="text-center mb-12">
-
-           <motion.div
-          initial={{ y: -20 }}
-          animate={{ y: 0 }}
-          className="text-center mb-6"
-        >
-          <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 sm:text-5xl">
-            Your Treasured Collection
-          </h1>
-         
-        </motion.div>
+          <motion.div
+            initial={{ y: -20 }}
+            animate={{ y: 0 }}
+            className="text-center mb-6"
+          >
+            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 sm:text-5xl">
+              Your Treasured Collection
+            </h1>
+          </motion.div>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             Artifacts you've liked and saved for future reference
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
           <AnimatePresence>
             {likedArtifacts.map((artifact) => (
               <motion.div
@@ -226,7 +222,7 @@ const LikedArtifacts = () => {
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.4 }}
                 whileHover={{ y: -5 }}
-                className="shadow-xl hover:shadow-2xl max-w-8xl mx-auto  transition-shadow duration-300 rounded-2xl overflow-hidden"
+                className="shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden bg-white dark:bg-gray-800"
               >
                 <ArtifactCard artifact={artifact} />
               </motion.div>

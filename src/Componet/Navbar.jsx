@@ -52,14 +52,14 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-4 sticky top-0 z-50 shadow-lg border-b border-stone-700/50 backdrop-blur-sm">
-      <div className="container mx-auto  flex items-center justify-between">
+      <div className="lg:px-10 px:4 mx-auto max-w-8xl flex items-center justify-between">
      
         <Link 
           to="/" 
-          className="text-2xl font-bold flex items-center hover:text-amber-400 transition-colors group"
+          className="text-2xl font-bold flex items-center hover:text-amber-500 transition-colors group"
         >
           <span className="mr-2 group-hover:rotate-12 transition-transform">🏛️</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800">
             Artifact Treasury
           </span>
         </Link>
@@ -74,9 +74,9 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-amber-400" />
+              <X className="h-6 w-6 text-amber-600" />
             ) : (
-              <Menu className="h-6 w-6 text-amber-400" />
+              <Menu className="h-6 w-6 text-amber-600" />
             )}
           </motion.button>
         </div>
@@ -85,14 +85,14 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link 
             to="/" 
-            className={`relative px-3 py-1.5 hover:text-amber-300 transition-colors ${
-              activeRoute === "/" ? "text-amber-300 font-medium" : "text-stone-300"
+            className={`relative px-3 py-1.5 hover:text-amber-500 transition-colors ${
+              activeRoute === "/" ? "text-amber-600 font-medium" : "text-stone-300"
             }`}
           >
             Home
             {activeRoute === "/" && (
               <motion.span 
-                className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400"
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600"
                 layoutId="navIndicator"
                 transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
               />
@@ -101,14 +101,14 @@ const Navbar = () => {
           
           <Link 
             to="/allArtifacts" 
-            className={`relative px-3 py-1.5 hover:text-amber-300 transition-colors ${
-              activeRoute === "/allArtifacts" ? "text-amber-300 font-medium" : "text-stone-300"
+            className={`relative px-3 py-1.5 hover:text-amber-500 transition-colors ${
+              activeRoute === "/allArtifacts" ? "text-amber-600 font-medium" : "text-stone-300"
             }`}
           >
             All Artifacts
             {activeRoute === "/allArtifacts" && (
               <motion.span 
-                className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400"
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600"
                 layoutId="navIndicator"
                 transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
               />
@@ -119,14 +119,14 @@ const Navbar = () => {
             <>
               <Link
                 to="/addArtifacts"
-                className={`relative px-3 py-1.5 hover:text-amber-300 transition-colors ${
-                  activeRoute === "/addArtifacts" ? "text-amber-300 font-medium" : "text-stone-300"
+                className={`relative px-3 py-1.5 hover:text-amber-500 transition-colors ${
+                  activeRoute === "/addArtifacts" ? "text-amber-600 font-medium" : "text-stone-300"
                 }`}
               >
                 Add Artifacts
                 {activeRoute === "/addArtifacts" && (
                   <motion.span 
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500"
                     layoutId="navIndicator"
                     transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
                   />
@@ -134,14 +134,14 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/my-artifacts"
-                className={`relative px-3 py-1.5 hover:text-amber-300 transition-colors ${
-                  activeRoute === "/my-artifacts" ? "text-amber-300 font-medium" : "text-stone-300"
+                className={`relative px-3 py-1.5 hover:text-amber-500 transition-colors ${
+                  activeRoute === "/my-artifacts" ? "text-amber-600 font-medium" : "text-stone-300"
                 }`}
               >
                 My Artifacts
                 {activeRoute === "/my-artifacts" && (
                   <motion.span 
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600"
                     layoutId="navIndicator"
                     transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
                   />
@@ -149,14 +149,14 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/liked-artifacts"
-                className={`relative px-3 py-1.5 hover:text-amber-300 transition-colors ${
-                  activeRoute === "/liked-artifacts" ? "text-amber-300 font-medium" : "text-stone-300"
+                className={`relative px-3 py-1.5 hover:text-amber-500 transition-colors ${
+                  activeRoute === "/liked-artifacts" ? "text-amber-600 font-medium" : "text-stone-300"
                 }`}
               >
                Liked Artifacts
                 {activeRoute === "/liked-artifacts" && (
                   <motion.span 
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600"
                     layoutId="navIndicator"
                     transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
                   />
@@ -173,7 +173,7 @@ const Navbar = () => {
                 aria-label="User menu"
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="relative rounded-full h-10 w-10 overflow-hidden border-2 border-amber-400/50 group-hover:border-amber-400 transition-all">
+                <div className="relative rounded-full h-10 w-10 overflow-hidden border-2 border-amber-400/50 group-hover:border-amber-500 transition-all">
                   <img
                     src={user?.photoURL || "https://via.placeholder.com/40"}
                     alt={user?.displayName || "User"}
@@ -184,13 +184,13 @@ const Navbar = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
                 </div>
-                <span className="hidden lg:inline text-stone-200 group-hover:text-amber-300 transition-colors">
+                <span className="hidden lg:inline text-stone-200 group-hover:text-amber-500 transition-colors">
                   {user.displayName || "User"}
                 </span>
                 {isDropdownOpen ? (
-                  <ChevronUp className="h-5 w-5 text-amber-400" />
+                  <ChevronUp className="h-5 w-5 text-amber-600" />
                 ) : (
-                  <ChevronDown className="h-5 w-5 text-amber-400" />
+                  <ChevronDown className="h-5 w-5 text-amber-600" />
                 )}
               </motion.button>
               
@@ -222,7 +222,7 @@ const Navbar = () => {
                   </Link> */}
                   <button
                     onClick={handleLogout}
-                    className="block w-full text-left px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-300 focus:outline-none border-t border-stone-700/50"
+                    className="block w-full text-left px-4 py-3 text-sm text-stone-300 hover:bg-stone-700/50 transition-colors hover:text-amber-500 focus:outline-none border-t border-stone-700/50"
                   >
                     Logout
                   </button>
@@ -234,7 +234,7 @@ const Navbar = () => {
               <Link 
                 to="/login" 
                 className={`px-4 py-2 rounded-lg hover:bg-stone-700/50 transition-colors ${
-                  activeRoute === "/login" ? "text-amber-300 font-medium" : "text-stone-300"
+                  activeRoute === "/login" ? "text-amber-600 font-medium" : "text-stone-300"
                 }`}
               >
                 Login
@@ -242,7 +242,7 @@ const Navbar = () => {
               <Link 
                 to="/register" 
                 className={`px-4 py-2 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all ${
-                  activeRoute === "/register" ? "ring-2 ring-amber-400" : ""
+                  activeRoute === "/register" ? "ring-2 ring-amber-600" : ""
                 }`}
               >
                 Register
@@ -264,7 +264,7 @@ const Navbar = () => {
               <Link 
                 to="/" 
                 className={`py-3 px-4 rounded-lg hover:bg-stone-800/50 transition-colors ${
-                  activeRoute === "/" ? "text-amber-300 font-medium bg-stone-800/30" : "text-stone-300"
+                  activeRoute === "/" ? "text-amber-600 font-medium bg-stone-800/30" : "text-stone-300"
                 }`}
                 onClick={toggleMobileMenu}
               >
@@ -273,7 +273,7 @@ const Navbar = () => {
               <Link 
                 to="/allArtifacts" 
                 className={`py-3 px-4 rounded-lg hover:bg-stone-800/50 transition-colors ${
-                  activeRoute === "/allArtifacts" ? "text-amber-300 font-medium bg-stone-800/30" : "text-stone-300"
+                  activeRoute === "/allArtifacts" ? "text-amber-600 font-medium bg-stone-800/30" : "text-stone-300"
                 }`}
                 onClick={toggleMobileMenu}
               >
@@ -285,7 +285,7 @@ const Navbar = () => {
                   <Link
                     to="/addArtifacts"
                     className={`py-3 px-4 rounded-lg hover:bg-stone-800/50 transition-colors ${
-                      activeRoute === "/addArtifacts" ? "text-amber-300 font-medium bg-stone-800/30" : "text-stone-300"
+                      activeRoute === "/addArtifacts" ? "text-amber-600 font-medium bg-stone-800/30" : "text-stone-300"
                     }`}
                     onClick={toggleMobileMenu}
                   >
@@ -308,14 +308,14 @@ const Navbar = () => {
                  
                   <Link
                     to="/my-artifacts"
-                    className="py-3 px-4 rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-300 transition-colors"
+                    className="py-3 px-4 rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-500 transition-colors"
                     onClick={toggleMobileMenu}
                   >
                     My Artifacts
                   </Link>
                   <Link
                     to="/liked-artifacts"
-                    className="py-3 px-4 rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-300 transition-colors"
+                    className="py-3 px-4 rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-500 transition-colors"
                     onClick={toggleMobileMenu}
                   >
                     Liked Artifacts
@@ -329,7 +329,7 @@ const Navbar = () => {
                       handleLogout();
                       toggleMobileMenu();
                     }}
-                    className="py-3 px-4 text-left rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-300 transition-colors focus:outline-none"
+                    className="py-3 px-4 text-left rounded-lg text-stone-300 hover:bg-stone-800/50 hover:text-amber-500 transition-colors focus:outline-none"
                   >
                     Logout
                   </button>
@@ -340,7 +340,7 @@ const Navbar = () => {
                   <Link 
                     to="/login" 
                     className={`py-3 px-4 rounded-lg hover:bg-stone-800/50 transition-colors ${
-                      activeRoute === "/login" ? "text-amber-300 font-medium bg-stone-800/30" : "text-stone-300"
+                      activeRoute === "/login" ? "text-amber-600 font-medium bg-stone-800/30" : "text-stone-300"
                     }`}
                     onClick={toggleMobileMenu}
                   >
@@ -349,7 +349,7 @@ const Navbar = () => {
                   <Link 
                     to="/register" 
                     className={`py-3 px-4 rounded-lg bg-gradient-to-r from-amber-600 to-amber-700 text-white text-center shadow-md hover:shadow-lg transition-all ${
-                      activeRoute === "/register" ? "ring-2 ring-amber-400" : ""
+                      activeRoute === "/register" ? "ring-2 ring-amber-600" : ""
                     }`}
                     onClick={toggleMobileMenu}
                   >

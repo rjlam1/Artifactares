@@ -93,7 +93,7 @@ const MyArtifacts = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800"
+      className="min-h-screen py-8 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800"
     >
       <div className="max-w-8xl mx-auto">
         <Helmet>
@@ -195,10 +195,10 @@ const MyArtifacts = () => {
               <table className="min-w-full divide-y divide-gray-700">
                 <thead className="bg-gray-700">
                   <tr>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Artifact</th>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider hidden sm:table-cell">Type</th>
-                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider hidden md:table-cell">Era</th>
-                    <th scope="col" className="px-4 py-3 text-right text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th>
+                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-amber-400 uppercase tracking-wider">Artifact</th>
+                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-amber-400 uppercase tracking-wider hidden sm:table-cell">Type</th>
+                    <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-amber-400 uppercase tracking-wider hidden md:table-cell">Era</th>
+                    <th scope="col" className="px-4 py-3 text-right text-xs font-medium text-amber-400 uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="bg-gray-800 divide-y divide-gray-700">
@@ -225,16 +225,16 @@ const MyArtifacts = () => {
                             />
                           </div>
                           <div className="ml-3">
-                            <div className="text-sm font-medium text-gray-100">{artifact.name}</div>
-                            <div className="text-xs text-gray-400 sm:hidden capitalize">{artifact.type}</div>
+                            <div className="text-sm font-medium text-stone-400">{artifact.name}</div>
+                            <div className="text-xs text-stone-400 sm:hidden capitalize">{artifact.type}</div>
                           </div>
                         </div>
                       </td>
                       <td className="px-4 py-4 whitespace-nowrap hidden sm:table-cell">
-                        <div className="text-sm text-gray-300 capitalize">{artifact.type}</div>
+                        <div className="text-sm text-stone-400 capitalize">{artifact.type}</div>
                       </td>
                       <td className="px-4 py-4 whitespace-nowrap hidden md:table-cell">
-                        <div className="text-sm text-gray-300">{artifact.era || 'Unknown'}</div>
+                        <div className="text-sm text-stone-400">{artifact.era || 'Unknown'}</div>
                       </td>
                       <td className="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
                         <div className="flex justify-end space-x-2">

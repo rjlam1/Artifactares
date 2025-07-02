@@ -169,10 +169,10 @@ const UpdateArtifact = () => {
           animate={{ y: 0 }}
           className="text-center mb-10"
         >
-          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 ">
             Curate Your Artifact
           </h2>
-          <p className="mt-2 text-gray-400">Refine the details of your historical treasure</p>
+          <p className="mt-2 text-stone-600">Refine the details of your historical treasure</p>
         </motion.div>
 
         <motion.div
@@ -182,7 +182,7 @@ const UpdateArtifact = () => {
           <form onSubmit={handleUpdate} className="p-6 sm:p-8">
             <div className="grid gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Artifact Name</label>
+                <label className="block text-sm font-medium text-amber-500 mb-1">Artifact Name</label>
                 <input
                   name="name"
                   defaultValue={artifact.name}
@@ -193,7 +193,7 @@ const UpdateArtifact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Image URL</label>
+                <label className="block text-sm font-medium text-amber-500 mb-1">Image URL</label>
                 <input
                   name="image"
                   defaultValue={artifact.image}
@@ -204,7 +204,7 @@ const UpdateArtifact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Artifact Type</label>
+                <label className="block text-sm font-medium text-amber-500 mb-1">Artifact Type</label>
                 <select
                   name="type"
                   defaultValue={artifact.type}
@@ -224,7 +224,7 @@ const UpdateArtifact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-1">Historical Context</label>
+                <label className="block text-sm font-medium text-amber-500 mb-1">Historical Context</label>
                 <textarea
                   name="context"
                   defaultValue={artifact.context}
@@ -237,7 +237,7 @@ const UpdateArtifact = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-1">Created At</label>
+                  <label className="block text-sm font-medium text-amber-500 mb-1">Created At</label>
                   <input
                     name="createdAt"
                     defaultValue={artifact.createdAt}
@@ -248,7 +248,7 @@ const UpdateArtifact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-1">Discovered At</label>
+                  <label className="block text-sm font-medium text-amber-500 mb-1">Discovered At</label>
                   <input
                     name="discoveredAt"
                     defaultValue={artifact.discoveredAt}
@@ -261,7 +261,7 @@ const UpdateArtifact = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-1">Discovered By</label>
+                  <label className="block text-sm font-medium text-amber-500 mb-1">Discovered By</label>
                   <input
                     name="discoveredBy"
                     defaultValue={artifact.discoveredBy}
@@ -272,7 +272,7 @@ const UpdateArtifact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-1">Current Location</label>
+                  <label className="block text-sm font-medium text-amber-500 mb-1">Current Location</label>
                   <input
                     name="presentLocation"
                     defaultValue={artifact.presentLocation}
@@ -288,7 +288,7 @@ const UpdateArtifact = () => {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-medium rounded-lg shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800  text-white font-medium rounded-lg shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
                 >
                   Update Artifact
                   <svg

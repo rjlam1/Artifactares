@@ -126,7 +126,7 @@ const ArtifactDetail = () => {
   if (!artifact) return null;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
       <ToastContainer 
         position="top-center" 
         autoClose={3000}
@@ -140,8 +140,8 @@ const ArtifactDetail = () => {
         theme="colored"
       />
 
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="max-w-8xl mx-auto">
+        <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-xl overflow-hidden">
          
           <div className="relative h-64 bg-gradient-to-r from-gray-900 to-gray-700 flex items-center justify-center">
             <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -151,7 +151,7 @@ const ArtifactDetail = () => {
           </div>
 
        
-          <div className="p-8 md:p-10">
+          <div className="lg:p-8 md:p-10">
             <div className="flex flex-col lg:flex-row gap-10">
              
               <div className="lg:w-1/2">
@@ -169,10 +169,10 @@ const ArtifactDetail = () => {
               </div>
 
             
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 p-8">
                 <div className="space-y-6">
                   <div className="border-b border-gray-200 pb-6">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-2">Artifact Details</h2>
+                    <h2 className="text-2xl font-semibold text-stone-600 mb-2">Artifact Details</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                       <div>
                         <p className="text-sm font-medium text-gray-500">Type</p>
@@ -194,12 +194,12 @@ const ArtifactDetail = () => {
                   </div>
 
                   <div className="border-b border-gray-200 pb-6">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Description</h3>
+                    <h3 className="text-xl font-semibold text-stone-600 mb-3">Description</h3>
                     <p className="text-gray-600 leading-relaxed">{artifact.shortDescription}</p>
                   </div>
 
                   <div className="border-b border-gray-200 pb-6">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Discovery Information</h3>
+                    <h3 className="text-xl font-semibold text-stone-600 mb-3">Discovery Information</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                       <div>
                         <p className="text-sm font-medium text-gray-500">Discovered By</p>
@@ -224,8 +224,8 @@ const ArtifactDetail = () => {
                         disabled={isLiking}
                         className={`flex items-center gap-2 px-5 py-2.5 rounded-full ${
                           isLikedByUser 
-                            ? 'bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600' 
-                            : 'bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600'
+                            ? 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800' 
+                            : 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800'
                         } text-white font-medium transition-all duration-300 shadow-md hover:shadow-lg ${
                           isLiking ? 'opacity-70 cursor-not-allowed' : ''
                         }`}
@@ -262,7 +262,7 @@ const ArtifactDetail = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                         </svg>
-                        <span className="font-bold text-gray-800">
+                        <span className="font-bold text-stone-600">
                           {artifact.likeCount} {artifact.likeCount === 1 ? 'like' : 'likes'}
                         </span>
                       </div>

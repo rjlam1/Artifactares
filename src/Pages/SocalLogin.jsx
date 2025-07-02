@@ -17,7 +17,7 @@ const SocialLogin = ({ from }) => {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 cursor-pointer">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-stone-300"></div>
@@ -64,7 +64,7 @@ const SocialLogin = ({ from }) => {
             </g>
           </svg>
         </motion.div>
-        <span>Continue with Google</span>
+        <span className="cursor-pointer">Continue with Google</span>
       </motion.button>
     </div>
   );
