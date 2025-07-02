@@ -50,9 +50,9 @@ const Register = () => {
   };
 
   return (
-    <div className="flex  flex-col lg:flex-row min-h-screen">
+    <div className="flex  flex-col lg:flex-row min-h-screen ">
       {/* Image Section */}
-      <div className="lg:w-1/2 w-full flex items-center justify-center p-6 bg-stone-100">
+      <div className="lg:w-1/2 w-full flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
         <img
           src="https://i.ibb.co/357K1Tn4/Sign-up-pana.png"
           alt="Register Illustration"
@@ -65,11 +65,11 @@ const Register = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="lg:w-1/2 w-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-stone-100"
+        className="lg:w-1/2 w-full flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800"
       >
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="w-full max-w-md mx-4 bg-white rounded-2xl shadow-xl overflow-hidden border border-stone-200"
+          className="w-full max-w-md  bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-xl overflow-hidden "
         >
           <div className="p-8">
             <Helmet>
@@ -81,10 +81,10 @@ const Register = () => {
               transition={{ delay: 0.2 }}
               className="text-center mb-8"
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-2">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent mb-2">
                 Create Account
               </h2>
-              <p className="text-gray-600">Join our artifact collection community</p>
+              <p className="text-stone-600">Join our artifact collection community</p>
             </motion.div>
 
             <form onSubmit={handleRegisterSubmit}>

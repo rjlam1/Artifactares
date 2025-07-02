@@ -126,7 +126,7 @@ const ArtifactDetail = () => {
   if (!artifact) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-8 lg:py-12  sm:px-6 lg:px-8">
       <ToastContainer 
         position="top-center" 
         autoClose={3000}
@@ -169,7 +169,7 @@ const ArtifactDetail = () => {
               </div>
 
             
-              <div className="lg:w-1/2 p-8">
+              <div className="lg:w-1/2 p-3">
                 <div className="space-y-6">
                   <div className="border-b border-gray-200 pb-6">
                     <h2 className="text-2xl font-semibold text-stone-600 mb-2">Artifact Details</h2>

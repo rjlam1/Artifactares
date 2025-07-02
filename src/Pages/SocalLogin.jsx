@@ -20,7 +20,6 @@ const SocialLogin = ({ from }) => {
     <div className="mt-6 cursor-pointer">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-stone-300"></div>
         </div>
       </div>
 
@@ -28,7 +27,7 @@ const SocialLogin = ({ from }) => {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         onClick={handleGoogle}
-        className="w-full mt-6 flex items-center justify-center gap-3 px-4 py-3 bg-white text-stone-800 font-medium rounded-lg shadow-sm border border-stone-300 hover:shadow-md transition-all"
+        className="w-full mt-6 flex items-center justify-center gap-3 px-4 py-3 bg-white  text-stone-700 font-medium rounded-lg shadow-sm border hover:shadow-md transition-all"
       >
         <motion.div
           animate={{ 

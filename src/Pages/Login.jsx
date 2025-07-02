@@ -34,9 +34,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-br from-gray-50 to-stone-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Image Section */}
-      <div className="md:w-1/2 flex justify-center items-center p-6">
+      <div className="md:w-1/2 flex justify-center items-center ">
         <img
           src="https://i.ibb.co/gFMpcM0R/Computer-login-pana-1.png"
           alt="Login Illustration"
@@ -49,11 +49,11 @@ const Login = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center justify-center md:w-1/2 p-6"
+        className="flex items-center justify-center md:w-1/2 "
       >
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden border border-stone-200"
+          className="w-full max-w-md bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl shadow-xl overflow-hidden border-white"
         >
           <div className="p-8">
             <Helmet>
@@ -65,10 +65,10 @@ const Login = () => {
               transition={{ delay: 0.2 }}
               className="text-center mb-8"
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-2">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent mb-2">
                 Welcome Back
               </h2>
-              <p className="text-gray-600">Sign in to your account</p>
+              <p className="text-stone-600">Sign in to your account</p>
             </motion.div>
 
             <form onSubmit={handleLoginSubmit}>
