@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import { AuthContext } from '../AuthProvider/AuthContext/AuthProvider';
+import Loader from './Loader';
 
 // API_BASE_URL ডেফাইন করা হলো এখানে
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
@@ -71,26 +72,7 @@ const AllArtifacts = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-50 to-stone-100">
-        <Helmet>
-          <title>ArtifactEra | AllArtifacts</title>
-        </Helmet>
-        <div className="text-center">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="w-16 h-16 border-4 border-amber-500/30 border-t-amber-600 rounded-full mx-auto"
-          ></motion.div>
-          <motion.p 
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: 1 }}
-            transition={{ repeat: Infinity, repeatType: "reverse", duration: 1.5 }}
-            className="mt-6 text-lg font-medium text-stone-700"
-          >
-            Unearthing artifacts...
-          </motion.p>
-        </div>
-      </div>
+      <Loader></Loader>
     );
   }
 

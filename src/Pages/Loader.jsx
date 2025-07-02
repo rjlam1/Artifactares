@@ -2,22 +2,13 @@ import { motion } from "framer-motion";
 
 const Loader = () => {
   return (
-     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-50 to-stone-100">
-         
+<div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 flex items-center justify-center">
         <div className="text-center">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="w-16 h-16 border-4 border-amber-500/30 border-t-amber-600 rounded-full mx-auto"
-          ></motion.div>
-          <motion.p 
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: 1 }}
-            transition={{ repeat: Infinity, repeatType: "reverse", duration: 1.5 }}
-            className="mt-6 text-lg font-medium text-stone-700"
-          >
-            Unearthing artifacts...
-          </motion.p>
+          <div className="flex justify-center mb-4">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500"></div>
+          </div>
+          {/* <h2 className="text-xl font-medium text-amber-400">Loading Artifact Form...</h2>
+          <p className="text-gray-400 mt-2">Preparing everything for you</p> */}
         </div>
       </div>
   );

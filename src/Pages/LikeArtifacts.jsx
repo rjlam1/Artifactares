@@ -194,7 +194,7 @@ const LikedArtifacts = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12  sm:px-6 lg:px-8"
+      className="bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent dark:from-gray-900 dark:to-gray-800 py-12  sm:px-6 lg:px-8"
     >
       <div className="max-w-8xl mx-auto">
         <div className="text-center mb-12">
