@@ -80,14 +80,7 @@ const Discoverers = () => {
                   <h4 className="text-xl font-bold text-amber-400 mb-3">{d.discovery}</h4>
                   <p className="text-stone-600 italic">"{d.quote}"</p>
                   
-                  {/* <div className="mt-6 pt-4 border-t border-gray-700">
-                    <button className="text-sm font-medium text-amber-600 cursor-pointer hover:text-amber-500 transition-colors flex items-center group">
-                      Learn more
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  </div> */}
+                
                 </div>
               </div>
             </motion.div>
